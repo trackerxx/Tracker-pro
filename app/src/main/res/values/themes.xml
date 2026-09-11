@@ -1,1 +1,3 @@
-
+<resources>
+    <style name="Theme.Tracker" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
