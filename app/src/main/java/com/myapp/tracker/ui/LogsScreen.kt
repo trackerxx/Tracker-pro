@@ -180,7 +180,7 @@ private fun SearchField(value: String, placeholder: String, onValueChange: (Stri
 }
 
 @Composable
-private fun FilterChip(icon: ImageVector, label: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+internal fun FilterChip(icon: ImageVector, label: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
     Row(
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
@@ -249,7 +249,7 @@ private fun TransactionsSubtab(state: LogsUiState, viewModel: LogsViewModel) {
     }
 }
 
-private fun categoryIcon(category: String): ImageVector = when (category) {
+internal fun categoryIcon(category: String): ImageVector = when (category) {
     "Food" -> Icons.Filled.Restaurant
     "Transport" -> Icons.Filled.DirectionsBus
     "Utilities" -> Icons.Filled.Bolt
@@ -438,7 +438,7 @@ private fun DebtCard(debt: Debt, amountColor: Color, onToggleStatus: (String) ->
 }
 
 @Composable
-private fun EmptyState(text: String) {
+internal fun EmptyState(text: String) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
