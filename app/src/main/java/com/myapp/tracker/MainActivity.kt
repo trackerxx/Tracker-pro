@@ -29,8 +29,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.myapp.tracker.data.HomeViewModel
 import com.myapp.tracker.data.LogsViewModel
+import com.myapp.tracker.data.StatsViewModel
 import com.myapp.tracker.ui.HomeScreen
 import com.myapp.tracker.ui.LogsScreen
+import com.myapp.tracker.ui.StatsScreen
 import com.myapp.tracker.ui.theme.AppBackground
 import com.myapp.tracker.ui.theme.BrandRed
 import com.myapp.tracker.ui.theme.TrackerTheme
@@ -95,7 +97,10 @@ fun TrackerApp() {
                         val viewModel: LogsViewModel = viewModel()
                         LogsScreen(viewModel = viewModel)
                     }
-                    AppTab.STATS -> ComingSoonScreen("Stats")
+                    AppTab.STATS -> {
+                        val viewModel: StatsViewModel = viewModel()
+                        StatsScreen(viewModel = viewModel)
+                    }
                     AppTab.PROFILE -> ComingSoonScreen("Profile")
                 }
             }
