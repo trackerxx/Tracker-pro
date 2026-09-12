@@ -23,12 +23,16 @@ data class Transaction(
 )
 
 enum class DebtType { OWE, OWED }
+enum class DebtStatus { PENDING, SETTLED }
 
 data class Debt(
     val id: String,
     val person: String,
     val amount: Double,
-    val type: DebtType
+    val type: DebtType,
+    val dueDate: LocalDate,
+    val status: DebtStatus = DebtStatus.PENDING,
+    val note: String = ""
 )
 
 enum class ChartRange { WEEK, MONTH }
